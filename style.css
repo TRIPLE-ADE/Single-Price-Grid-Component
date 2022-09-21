@@ -31,7 +31,7 @@ section{
 h1{
     font-size: 1.2rem;
 }
-h5{
+h2{
     font-size: 1rem;
 }
 .community-info{
@@ -42,7 +42,7 @@ h5{
 .community-info h1{
     color:var(--cyan);
 }
-.community-info h5{
+.community-info h2{
     color: var(--yellow)
 }
 .community-info p{
@@ -57,18 +57,23 @@ h1, h5{
    color: var(--gray);
    padding: 1.5rem 2.5rem ;
 }
-p, span{
+.price-duration{
+    display: inline-flex;
+    align-items: center;
+    gap:20px;
+}
+p{
     font-size: 1rem;
     line-height: 1.5;
 }
-p:has(span){
-    display: inline-flex;
-    align-items: center;
-    gap: 20px;
+.duration{
+    opacity:0.7;
+}
+.price{
     font-size: 1.8rem;
     font-weight: 700;
 }
-.whyUs-info p, span{
+.whyUs-info p{
     opacity:0.7;
 }
 .subscription-info button{
@@ -116,12 +121,12 @@ button:hover{
         grid-column: 1/1;
         padding: 1.5rem;
     }
-        h5{
+        h2{
         line-height: 1.5;
         margin: 10px 0;
 
     }
-    p, span{
+    p, p:has(span){
         font-size: 0.8rem;
         line-height: 1.5;
     }
