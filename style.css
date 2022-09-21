@@ -24,10 +24,10 @@ main{
 section{
     display: grid;
     grid-template-columns:repeat(2, 1fr);
-    width: 50%;
+    width: 49%;
     border-radius: 0.6rem;
     overflow: hidden;
-}
+}      
 h1{
     font-size: 1.2rem;
 }
@@ -66,6 +66,7 @@ p:has(span){
     align-items: center;
     gap: 20px;
     font-size: 1.8rem;
+    font-weight: 700;
 }
 .whyUs-info p, span{
     opacity:0.7;
@@ -80,6 +81,9 @@ p:has(span){
     color: var(--gray);
     box-shadow:rgba(0, 0, 0, 0.16) 0px 6px 10px ;
 }
+button:hover{
+    transform: scale(1.05);
+}
 .whyUs-info{
     opacity: 0.8;
 }
@@ -88,3 +92,40 @@ p:has(span){
 }
 .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (max-width:1000px) {
+    section{
+        width: 70%;
+    }
+}
+@media (max-width:900px) {
+    section{
+        width: 80%;
+    }
+
+}
+@media (max-width:600px) {
+    section{
+        width: 85%;
+        grid-template-columns: 1fr;
+        margin: 50px 0;
+    }
+
+    .container{ 
+        grid-column: 1/1;
+        padding: 1.5rem;
+    }
+        h5{
+        line-height: 1.5;
+        margin: 10px 0;
+
+    }
+    p, span{
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+    .whyUs-info p{
+        font-size:0.8rem;
+    }
+}
